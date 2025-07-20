@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Financeiro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Meu Controle Financeiro</h1>
+
+    <div class="summary">
+      <div class="card entrada">
+        <h3>Entradas</h3>
+        <p>R$ <span id="income">0.00</span></p>
+      </div>
+      <div class="card saida">
+        <h3>Saídas</h3>
+        <p>R$ <span id="expenses">0.00</span></p>
+      </div>
+      <div class="card saldo">
+        <h3>Saldo</h3>
+        <p>R$ <span id="balance">0.00</span></p>
+      </div>
+    </div>
+
+    <form id="transaction-form">
+      <input type="text" id="description" placeholder="Descrição" required />
+      <input type="number" id="amount" placeholder="Valor (ex: -50 ou 100)" required />
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="transaction-list"></ul>
+
+    <button class="report-btn" onclick="generateReport()">📊 Relatório Semanal</button>
+    <div id="report-output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
